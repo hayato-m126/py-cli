@@ -1,6 +1,7 @@
 from importlib.metadata import version
 
 import click
+from py_cli.sub import sub
 
 try:
     __version__ = version("py-cli")
@@ -11,6 +12,7 @@ CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}
 
 
 def main() -> None:
+    cmd.add_command(sub)
     cmd()
 
 
