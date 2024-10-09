@@ -10,6 +10,8 @@ requires-python = ">=3.12,<3.13"
 license = "Apache-2.0"
 dependencies = [
     "click>=8.1.7",
+    "frontend",
+    "command"
 ]
 
 [project.scripts]
@@ -21,6 +23,10 @@ build-backend = "hatchling.build"
 
 [tool.uv.workspace]
 members = ["projects/*"]
+
+[tool.uv.sources]
+frontend = { workspace = true }
+command = { workspace = true }
 
 [tool.hatch.metadata]
 allow-direct-references = true

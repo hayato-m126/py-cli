@@ -7,7 +7,7 @@ WORKDIR /app
 # copy the app dir.
 COPY projects/frontend app
 
-# install libraries.
+# uvのlockから入れる方法似直す
 RUN pip install --no-cache-dir fastapi uvicorn
 
 # expose the port.
