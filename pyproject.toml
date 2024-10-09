@@ -1,7 +1,20 @@
 [project]
 name = "py-cli"
 version = "0.1.0"
-description = "Add your description here"
+authors = [
+  { name = "Hayato Mizushima", email = "hayato.mizushima@tier4.jp" },
+]
+description = "python sample cli repository"
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = []
+requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
+dependencies = [
+    "click>=8.1.7",
+]
+
+[project.scripts]
+py-cli = "py_cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
