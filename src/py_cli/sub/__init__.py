@@ -1,5 +1,4 @@
 import click
-from command import hello as hello_cmd
 
 CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}
 
@@ -11,4 +10,6 @@ def sub() -> None:
 
 @sub.command(context_settings=CONTEXT_SETTINGS)
 def hello() -> None:
+    from command import hello as hello_cmd
+
     hello_cmd()
